@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="MyCommands">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="Commands">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="module" type="xs:string" />
+              <xs:element minOccurs="0" name="company" type="xs:string" />
+              <xs:element minOccurs="0" name="description" type="xs:string" />
+              <xs:element maxOccurs="unbounded" name="Command">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="description" type="xs:string" />
+                    <xs:element name="contents">
+                      <xs:complexType mixed="true">
+                        <xs:sequence minOccurs="0">
+                          <xs:element minOccurs="0" maxOccurs="unbounded" name="action">
+                            <xs:complexType>
+                              <xs:attribute name="time" type="xs:unsignedShort" use="required" />
+                              <xs:attribute name="type" type="xs:string" use="required" />
+                              <xs:attribute name="value" type="xs:string" use="optional" />
+                              <xs:attribute name="x" type="xs:unsignedByte" use="optional" />
+                              <xs:attribute name="y" type="xs:unsignedShort" use="optional" />
+                              <xs:attribute name="window" type="xs:unsignedByte" use="optional" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="windows">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element maxOccurs="unbounded" name="window">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="module" type="xs:string" />
+                                      <xs:element name="company" type="xs:string" />
+                                      <xs:element name="description" type="xs:string" />
+                                      <xs:element name="caption" type="xs:string" />
+                                      <xs:element name="template" type="xs:string" />
+                                      <xs:element name="class" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element minOccurs="0" name="RTF" type="xs:string" />
+                          <xs:element minOccurs="0" name="TEXT" type="xs:string" />
+                        </xs:sequence>
+                        <xs:attribute name="type" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                  <xs:attribute name="group" type="xs:string" use="required" />
+                  <xs:attribute name="enabled" type="xs:boolean" use="required" />
+                  <xs:attribute name="states" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="type" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Lists">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="List">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="Value" type="xs:string" />
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" type="xs:decimal" use="required" />
+      <xs:attribute name="language" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

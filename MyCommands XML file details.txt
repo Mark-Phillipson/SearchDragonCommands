@@ -1,0 +1,123 @@
+---------------------------------------------------------------
+ table name MyCommands
+ number of rows 1
+MyCommands_Id System.Int32
+version System.String
+language System.String
+---------------------------------------------------------------
+
+ table name Commands
+ number of rows 6
+module System.String
+company System.String
+description System.String
+Commands_Id System.Int32
+type System.String
+MyCommands_Id System.Int32
+---------------------------------------------------------------
+ 
+ table name Command
+ number of rows 137
+description System.String
+Command_Id System.Int32
+name System.String
+group System.String
+enabled System.String
+states System.String
+Commands_Id System.Int32
+---------------------------------------------------------------
+
+
+ table name contents
+  number of rows 137
+contents_Id System.Int32
+RTF System.String
+TEXT System.String
+type System.String
+Command_Id System.Int32
+---------------------------------------------------------------
+
+ table name action
+ number of rows 50
+time System.String
+type System.String
+value System.String
+x System.String
+y System.String
+window System.String
+contents_Id System.Int32
+---------------------------------------------------------------
+
+ table name windows
+ number of rows 2
+windows_Id System.Int32
+contents_Id System.Int32
+---------------------------------------------------------------
+
+ table name window
+ number of rows 3
+module System.String
+company System.String
+description System.String
+caption System.String
+template System.String
+class System.String
+windows_Id System.Int32
+---------------------------------------------------------------
+
+ table name Lists
+ number of rows 1
+Lists_Id System.Int32
+MyCommands_Id System.Int32
+---------------------------------------------------------------
+
+ table name List
+ number of rows 27
+List_Id System.Int32
+name System.String
+Lists_Id System.Int32
+---------------------------------------------------------------
+
+ table name Value
+ number of rows 291
+Value_Text System.String
+List_Id System.Int32
+---------------------------------------------------------------
+
+ relations name windows_window
+parent/child---------------------------------------------------------------
+windows
+window
+ relations name contents_action
+parent/child---------------------------------------------------------------
+contents
+action
+ relations name contents_windows
+parent/child---------------------------------------------------------------
+contents
+windows
+ relations name Command_contents
+parent/child---------------------------------------------------------------
+Command
+contents
+ relations name Commands_Command
+parent/child---------------------------------------------------------------
+Commands
+Command
+ relations name List_Value
+parent/child---------------------------------------------------------------
+List
+Value
+ relations name Lists_List
+parent/child---------------------------------------------------------------
+Lists
+List
+ relations name MyCommands_Commands
+parent/child---------------------------------------------------------------
+MyCommands
+Commands
+ relations name MyCommands_Lists
+parent/child---------------------------------------------------------------
+MyCommands
+Lists
+
