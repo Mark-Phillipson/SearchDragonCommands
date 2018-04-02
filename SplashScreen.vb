@@ -16,7 +16,7 @@
         'Else
         'If the application title is missing, use the application name, without the extension
         'ApplicationTitle.Text = System.IO.Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
-        ApplicationTitle.Text = "Save Clipboard/Show Dragon Commands"
+        ApplicationTitle.Text = "Show/Search Dragon Commands"
         'End If
 
         'Format the version information using the text set into the Version control at design time as the
