@@ -294,7 +294,6 @@
     <None Include="LaunchApplicationsDataSet.xss">
       <DependentUpon>LaunchApplicationsDataSet.xsd</DependentUpon>
     </None>
-    <None Include="LaunchApplications_1_TemporaryKey.pfx" />
     <None Include="MyCommands.xsd" />
     <Content Include="MyCommands XML file details.txt" />
     <None Include="MyDatabaseDataSet.xsc">
@@ -309,8 +308,6 @@
       <DependentUpon>MyDatabaseDataSet.xsd</DependentUpon>
     </None>
     <None Include="Resources\Clipboard-Next1.png" />
-    <Content Include="MyCommands.xml" />
-    <None Include="LaunchApplications_TemporaryKey.pfx" />
     <None Include="My Project\app.manifest" />
     <None Include="app.config">
       <SubType>Designer</SubType>
