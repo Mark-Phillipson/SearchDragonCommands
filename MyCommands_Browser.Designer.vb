@@ -32,6 +32,8 @@ Partial Class MyCommands_Browser
         Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MyCommands_Browser))
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BottomToolStripPanel = New System.Windows.Forms.ToolStripPanel()
@@ -88,7 +90,7 @@ Partial Class MyCommands_Browser
         '
         'BottomToolStripPanel
         '
-        Me.BottomToolStripPanel.Location = New System.Drawing.Point(0, 0)
+        Me.BottomToolStripPanel.Location = New System.Drawing.Point(-7, 0)
         Me.BottomToolStripPanel.Name = "BottomToolStripPanel"
         Me.BottomToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal
         Me.BottomToolStripPanel.RowMargin = New System.Windows.Forms.Padding(3, 0, 0, 0)
@@ -96,7 +98,7 @@ Partial Class MyCommands_Browser
         '
         'RightToolStripPanel
         '
-        Me.RightToolStripPanel.Location = New System.Drawing.Point(0, 0)
+        Me.RightToolStripPanel.Location = New System.Drawing.Point(-7, 0)
         Me.RightToolStripPanel.Name = "RightToolStripPanel"
         Me.RightToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal
         Me.RightToolStripPanel.RowMargin = New System.Windows.Forms.Padding(3, 0, 0, 0)
@@ -104,7 +106,7 @@ Partial Class MyCommands_Browser
         '
         'LeftToolStripPanel
         '
-        Me.LeftToolStripPanel.Location = New System.Drawing.Point(0, 0)
+        Me.LeftToolStripPanel.Location = New System.Drawing.Point(-7, 0)
         Me.LeftToolStripPanel.Name = "LeftToolStripPanel"
         Me.LeftToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal
         Me.LeftToolStripPanel.RowMargin = New System.Windows.Forms.Padding(3, 0, 0, 0)
@@ -113,11 +115,11 @@ Partial Class MyCommands_Browser
         'ContentPanel
         '
         Me.ContentPanel.AutoScroll = True
-        Me.ContentPanel.Size = New System.Drawing.Size(1011, 655)
+        Me.ContentPanel.Size = New System.Drawing.Size(1010, 655)
         '
         'TopToolStripPanel
         '
-        Me.TopToolStripPanel.Location = New System.Drawing.Point(0, 0)
+        Me.TopToolStripPanel.Location = New System.Drawing.Point(-7, 0)
         Me.TopToolStripPanel.Name = "TopToolStripPanel"
         Me.TopToolStripPanel.Orientation = System.Windows.Forms.Orientation.Horizontal
         Me.TopToolStripPanel.RowMargin = New System.Windows.Forms.Padding(3, 0, 0, 0)
@@ -125,37 +127,52 @@ Partial Class MyCommands_Browser
         '
         'DataGridViewCommand
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.MenuText
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewCommand.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Red
+        Me.DataGridViewCommand.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridViewCommand.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Red
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewCommand.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer), CType(CType(28, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Red
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewCommand.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridViewCommand.Dock = System.Windows.Forms.DockStyle.Left
         Me.DataGridViewCommand.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter
         Me.DataGridViewCommand.GridColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.DataGridViewCommand.Location = New System.Drawing.Point(0, 0)
         Me.DataGridViewCommand.Name = "DataGridViewCommand"
         Me.DataGridViewCommand.ReadOnly = True
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewCommand.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewCommand.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewCommand.RowHeadersVisible = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
-        Me.DataGridViewCommand.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Red
+        Me.DataGridViewCommand.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridViewCommand.RowTemplate.ReadOnly = True
         Me.DataGridViewCommand.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewCommand.Size = New System.Drawing.Size(409, 661)
+        Me.DataGridViewCommand.Size = New System.Drawing.Size(408, 710)
         Me.DataGridViewCommand.TabIndex = 0
         '
         'Panel2
@@ -163,9 +180,9 @@ Partial Class MyCommands_Browser
         Me.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Panel2.Location = New System.Drawing.Point(309, 32)
+        Me.Panel2.Location = New System.Drawing.Point(302, 32)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(266, 18)
+        Me.Panel2.Size = New System.Drawing.Size(265, 18)
         Me.Panel2.TabIndex = 1
         '
         'Panel1
@@ -176,18 +193,18 @@ Partial Class MyCommands_Browser
         Me.Panel1.Controls.Add(Me.TextBoxFilterApplied)
         Me.Panel1.Controls.Add(Me.DataGridViewContents)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Panel1.Location = New System.Drawing.Point(13, 288)
+        Me.Panel1.Location = New System.Drawing.Point(-150, 288)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(588, 174)
+        Me.Panel1.Size = New System.Drawing.Size(587, 174)
         Me.Panel1.TabIndex = 16
         '
         'TextBoxProcess
         '
         Me.TextBoxProcess.BackColor = System.Drawing.SystemColors.InactiveCaptionText
         Me.TextBoxProcess.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBoxProcess.Location = New System.Drawing.Point(278, 20)
+        Me.TextBoxProcess.Location = New System.Drawing.Point(143, 20)
         Me.TextBoxProcess.Name = "TextBoxProcess"
-        Me.TextBoxProcess.Size = New System.Drawing.Size(200, 20)
+        Me.TextBoxProcess.Size = New System.Drawing.Size(199, 20)
         Me.TextBoxProcess.TabIndex = 18
         Me.TextBoxProcess.Visible = False
         '
@@ -195,9 +212,9 @@ Partial Class MyCommands_Browser
         '
         Me.TextBoxApplicationCaption.BackColor = System.Drawing.SystemColors.InfoText
         Me.TextBoxApplicationCaption.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBoxApplicationCaption.Location = New System.Drawing.Point(23, 209)
+        Me.TextBoxApplicationCaption.Location = New System.Drawing.Point(16, 209)
         Me.TextBoxApplicationCaption.Name = "TextBoxApplicationCaption"
-        Me.TextBoxApplicationCaption.Size = New System.Drawing.Size(390, 20)
+        Me.TextBoxApplicationCaption.Size = New System.Drawing.Size(389, 20)
         Me.TextBoxApplicationCaption.TabIndex = 17
         Me.TextBoxApplicationCaption.Visible = False
         '
@@ -206,10 +223,10 @@ Partial Class MyCommands_Browser
         Me.TextBoxFilterApplied.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.TextBoxFilterApplied.BackColor = System.Drawing.SystemColors.InfoText
         Me.TextBoxFilterApplied.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBoxFilterApplied.Location = New System.Drawing.Point(195, 22)
+        Me.TextBoxFilterApplied.Location = New System.Drawing.Point(-54, 22)
         Me.TextBoxFilterApplied.Multiline = True
         Me.TextBoxFilterApplied.Name = "TextBoxFilterApplied"
-        Me.TextBoxFilterApplied.Size = New System.Drawing.Size(337, 42)
+        Me.TextBoxFilterApplied.Size = New System.Drawing.Size(336, 42)
         Me.TextBoxFilterApplied.TabIndex = 13
         Me.TextBoxFilterApplied.Visible = False
         '
@@ -219,23 +236,23 @@ Partial Class MyCommands_Browser
         Me.DataGridViewContents.AllowUserToDeleteRows = False
         Me.DataGridViewContents.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.DataGridViewContents.CausesValidation = False
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewContents.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewContents.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewContents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewContents.GridColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.DataGridViewContents.Location = New System.Drawing.Point(324, 22)
+        Me.DataGridViewContents.Location = New System.Drawing.Point(72, 22)
         Me.DataGridViewContents.MultiSelect = False
         Me.DataGridViewContents.Name = "DataGridViewContents"
         Me.DataGridViewContents.ReadOnly = True
         Me.DataGridViewContents.RowHeadersVisible = False
         Me.DataGridViewContents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.DataGridViewContents.Size = New System.Drawing.Size(249, 50)
+        Me.DataGridViewContents.Size = New System.Drawing.Size(248, 50)
         Me.DataGridViewContents.TabIndex = 10
         Me.DataGridViewContents.Visible = False
         '
@@ -244,9 +261,9 @@ Partial Class MyCommands_Browser
         Me.TreeViewLists.BackColor = System.Drawing.SystemColors.InactiveCaptionText
         Me.TreeViewLists.Dock = System.Windows.Forms.DockStyle.Left
         Me.TreeViewLists.ForeColor = System.Drawing.SystemColors.Menu
-        Me.TreeViewLists.Location = New System.Drawing.Point(409, 0)
+        Me.TreeViewLists.Location = New System.Drawing.Point(408, 0)
         Me.TreeViewLists.Name = "TreeViewLists"
-        Me.TreeViewLists.Size = New System.Drawing.Size(142, 661)
+        Me.TreeViewLists.Size = New System.Drawing.Size(123, 710)
         Me.TreeViewLists.TabIndex = 1
         '
         'ToolStripContainer2
@@ -259,11 +276,11 @@ Partial Class MyCommands_Browser
         Me.ToolStripContainer2.ContentPanel.Controls.Add(Me.Panel3)
         Me.ToolStripContainer2.ContentPanel.Controls.Add(Me.TreeViewLists)
         Me.ToolStripContainer2.ContentPanel.Controls.Add(Me.DataGridViewCommand)
-        Me.ToolStripContainer2.ContentPanel.Size = New System.Drawing.Size(1143, 661)
+        Me.ToolStripContainer2.ContentPanel.Size = New System.Drawing.Size(1392, 687)
         Me.ToolStripContainer2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ToolStripContainer2.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripContainer2.Name = "ToolStripContainer2"
-        Me.ToolStripContainer2.Size = New System.Drawing.Size(1143, 686)
+        Me.ToolStripContainer2.Size = New System.Drawing.Size(1392, 712)
         Me.ToolStripContainer2.TabIndex = 0
         Me.ToolStripContainer2.Text = "ToolStripContainer2"
         '
@@ -274,11 +291,9 @@ Partial Class MyCommands_Browser
         '
         'Panel3
         '
-        Me.Panel3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Panel3.Controls.Add(Me.ApplicationCaptionsButton)
         Me.Panel3.Controls.Add(Me.TextBoxFilterApplications)
+        Me.Panel3.Controls.Add(Me.ApplicationCaptionsButton)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.checkboxSynchronise)
         Me.Panel3.Controls.Add(Me.RichTextBox1)
@@ -297,33 +312,35 @@ Partial Class MyCommands_Browser
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.txtSearch)
         Me.Panel3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Panel3.Location = New System.Drawing.Point(554, 3)
+        Me.Panel3.Location = New System.Drawing.Point(550, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(585, 658)
+        Me.Panel3.Size = New System.Drawing.Size(780, 707)
         Me.Panel3.TabIndex = 2
         '
         'ApplicationCaptionsButton
         '
-        Me.ApplicationCaptionsButton.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ApplicationCaptionsButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.ApplicationCaptionsButton.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.ApplicationCaptionsButton.FlatAppearance.BorderSize = 0
         Me.ApplicationCaptionsButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black
+        Me.ApplicationCaptionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ApplicationCaptionsButton.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ApplicationCaptionsButton.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ApplicationCaptionsButton.Location = New System.Drawing.Point(282, 99)
+        Me.ApplicationCaptionsButton.Location = New System.Drawing.Point(104, 99)
         Me.ApplicationCaptionsButton.Name = "ApplicationCaptionsButton"
-        Me.ApplicationCaptionsButton.Size = New System.Drawing.Size(75, 46)
+        Me.ApplicationCaptionsButton.Size = New System.Drawing.Size(88, 46)
         Me.ApplicationCaptionsButton.TabIndex = 24
         Me.ApplicationCaptionsButton.Text = "Application Captions"
         Me.ApplicationCaptionsButton.UseVisualStyleBackColor = False
         '
         'TextBoxFilterApplications
         '
-        Me.TextBoxFilterApplications.BackColor = System.Drawing.SystemColors.InfoText
-        Me.TextBoxFilterApplications.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxFilterApplications.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBoxFilterApplications.Location = New System.Drawing.Point(94, 29)
+        Me.TextBoxFilterApplications.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.TextBoxFilterApplications.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxFilterApplications.ForeColor = System.Drawing.Color.White
+        Me.TextBoxFilterApplications.Location = New System.Drawing.Point(87, 29)
         Me.TextBoxFilterApplications.Name = "TextBoxFilterApplications"
-        Me.TextBoxFilterApplications.Size = New System.Drawing.Size(191, 26)
+        Me.TextBoxFilterApplications.Size = New System.Drawing.Size(190, 27)
         Me.TextBoxFilterApplications.TabIndex = 2
         '
         'Label5
@@ -331,7 +348,7 @@ Partial Class MyCommands_Browser
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(3, 32)
+        Me.Label5.Location = New System.Drawing.Point(-4, 32)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(85, 20)
         Me.Label5.TabIndex = 23
@@ -345,32 +362,31 @@ Partial Class MyCommands_Browser
         Me.checkboxSynchronise.CheckState = System.Windows.Forms.CheckState.Checked
         Me.checkboxSynchronise.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.checkboxSynchronise.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.checkboxSynchronise.Location = New System.Drawing.Point(106, 61)
+        Me.checkboxSynchronise.Location = New System.Drawing.Point(197, 61)
         Me.checkboxSynchronise.Name = "checkboxSynchronise"
-        Me.checkboxSynchronise.Size = New System.Drawing.Size(156, 55)
+        Me.checkboxSynchronise.Size = New System.Drawing.Size(155, 55)
         Me.checkboxSynchronise.TabIndex = 6
         Me.checkboxSynchronise.Text = "Synchronise with Current Application"
         Me.checkboxSynchronise.UseVisualStyleBackColor = False
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RichTextBox1.BackColor = System.Drawing.SystemColors.GrayText
+        Me.RichTextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
         Me.RichTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RichTextBox1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.ForeColor = System.Drawing.SystemColors.MenuText
-        Me.RichTextBox1.Location = New System.Drawing.Point(3, 370)
+        Me.RichTextBox1.Font = New System.Drawing.Font("Cascadia Code", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.ForeColor = System.Drawing.Color.White
+        Me.RichTextBox1.Location = New System.Drawing.Point(5, 370)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.ReadOnly = True
-        Me.RichTextBox1.Size = New System.Drawing.Size(591, 288)
+        Me.RichTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.RichTextBox1.Size = New System.Drawing.Size(763, 325)
         Me.RichTextBox1.TabIndex = 9
         Me.RichTextBox1.Text = ""
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(3, 354)
+        Me.Label4.Location = New System.Drawing.Point(1, 354)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(146, 13)
         Me.Label4.TabIndex = 20
@@ -384,69 +400,70 @@ Partial Class MyCommands_Browser
         Me.DataGridViewCommandsShowAll.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.DataGridViewCommandsShowAll.CausesValidation = False
         Me.DataGridViewCommandsShowAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.InactiveCaptionText
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewCommandsShowAll.DefaultCellStyle = DataGridViewCellStyle5
-        Me.DataGridViewCommandsShowAll.Location = New System.Drawing.Point(0, 156)
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Red
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewCommandsShowAll.DefaultCellStyle = DataGridViewCellStyle7
+        Me.DataGridViewCommandsShowAll.Location = New System.Drawing.Point(4, 156)
         Me.DataGridViewCommandsShowAll.MultiSelect = False
         Me.DataGridViewCommandsShowAll.Name = "DataGridViewCommandsShowAll"
         Me.DataGridViewCommandsShowAll.ReadOnly = True
         Me.DataGridViewCommandsShowAll.RowHeadersVisible = False
         Me.DataGridViewCommandsShowAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.DataGridViewCommandsShowAll.Size = New System.Drawing.Size(585, 182)
+        Me.DataGridViewCommandsShowAll.Size = New System.Drawing.Size(650, 182)
         Me.DataGridViewCommandsShowAll.TabIndex = 19
         '
         'DataGridViewCommands
         '
         Me.DataGridViewCommands.AllowUserToAddRows = False
         Me.DataGridViewCommands.AllowUserToDeleteRows = False
+        Me.DataGridViewCommands.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.DataGridViewCommands.CausesValidation = False
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewCommands.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle6
-        Me.DataGridViewCommands.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.InactiveCaptionText
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridViewCommands.DefaultCellStyle = DataGridViewCellStyle7
-        Me.DataGridViewCommands.Location = New System.Drawing.Point(0, 163)
-        Me.DataGridViewCommands.MultiSelect = False
-        Me.DataGridViewCommands.Name = "DataGridViewCommands"
-        Me.DataGridViewCommands.ReadOnly = True
         DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlLightLight
         DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridViewCommands.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.DataGridViewCommands.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        Me.DataGridViewCommands.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.InactiveCaptionText
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewCommands.DefaultCellStyle = DataGridViewCellStyle9
+        Me.DataGridViewCommands.Location = New System.Drawing.Point(2, 163)
+        Me.DataGridViewCommands.MultiSelect = False
+        Me.DataGridViewCommands.Name = "DataGridViewCommands"
+        Me.DataGridViewCommands.ReadOnly = True
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridViewCommands.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridViewCommands.RowHeadersVisible = False
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.Black
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.White
-        Me.DataGridViewCommands.RowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle11.BackColor = System.Drawing.Color.Black
+        DataGridViewCellStyle11.ForeColor = System.Drawing.Color.White
+        Me.DataGridViewCommands.RowsDefaultCellStyle = DataGridViewCellStyle11
         Me.DataGridViewCommands.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.DataGridViewCommands.Size = New System.Drawing.Size(585, 171)
+        Me.DataGridViewCommands.Size = New System.Drawing.Size(716, 176)
         Me.DataGridViewCommands.TabIndex = 18
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(292, 56)
+        Me.Label1.Location = New System.Drawing.Point(575, 40)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(60, 13)
         Me.Label1.TabIndex = 14
@@ -454,38 +471,42 @@ Partial Class MyCommands_Browser
         '
         'ButtonApplication
         '
-        Me.ButtonApplication.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ButtonApplication.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.ButtonApplication.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.ButtonApplication.FlatAppearance.BorderSize = 0
         Me.ButtonApplication.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black
+        Me.ButtonApplication.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonApplication.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonApplication.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ButtonApplication.Location = New System.Drawing.Point(5, 93)
+        Me.ButtonApplication.Location = New System.Drawing.Point(-2, 93)
         Me.ButtonApplication.Name = "ButtonApplication"
-        Me.ButtonApplication.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonApplication.Size = New System.Drawing.Size(88, 25)
         Me.ButtonApplication.TabIndex = 4
         Me.ButtonApplication.Text = "Application"
         Me.ButtonApplication.UseVisualStyleBackColor = False
         '
         'TextBoxFilterGroup
         '
-        Me.TextBoxFilterGroup.BackColor = System.Drawing.SystemColors.InfoText
-        Me.TextBoxFilterGroup.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxFilterGroup.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBoxFilterGroup.Location = New System.Drawing.Point(390, 5)
+        Me.TextBoxFilterGroup.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.TextBoxFilterGroup.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxFilterGroup.ForeColor = System.Drawing.Color.White
+        Me.TextBoxFilterGroup.Location = New System.Drawing.Point(383, 5)
         Me.TextBoxFilterGroup.Name = "TextBoxFilterGroup"
-        Me.TextBoxFilterGroup.Size = New System.Drawing.Size(185, 26)
-        Me.TextBoxFilterGroup.TabIndex = 1
+        Me.TextBoxFilterGroup.Size = New System.Drawing.Size(184, 27)
+        Me.TextBoxFilterGroup.TabIndex = 3
         '
         'ButtonCommands
         '
-        Me.ButtonCommands.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ButtonCommands.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.ButtonCommands.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.ButtonCommands.FlatAppearance.BorderSize = 0
         Me.ButtonCommands.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black
+        Me.ButtonCommands.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonCommands.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonCommands.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ButtonCommands.Location = New System.Drawing.Point(5, 64)
+        Me.ButtonCommands.Location = New System.Drawing.Point(-2, 64)
         Me.ButtonCommands.Name = "ButtonCommands"
-        Me.ButtonCommands.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonCommands.Size = New System.Drawing.Size(88, 25)
         Me.ButtonCommands.TabIndex = 3
         Me.ButtonCommands.Text = "&Commands"
         Me.ButtonCommands.UseVisualStyleBackColor = False
@@ -495,33 +516,35 @@ Partial Class MyCommands_Browser
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(291, 6)
+        Me.Label3.Location = New System.Drawing.Point(284, 6)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(93, 20)
-        Me.Label3.TabIndex = 15
+        Me.Label3.TabIndex = 2
         Me.Label3.Text = "Filter Group"
         '
         'TextBoxDescription
         '
-        Me.TextBoxDescription.BackColor = System.Drawing.SystemColors.GrayText
+        Me.TextBoxDescription.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.TextBoxDescription.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBoxDescription.Location = New System.Drawing.Point(363, 56)
+        Me.TextBoxDescription.Location = New System.Drawing.Point(500, 56)
         Me.TextBoxDescription.Multiline = True
         Me.TextBoxDescription.Name = "TextBoxDescription"
         Me.TextBoxDescription.ReadOnly = True
-        Me.TextBoxDescription.Size = New System.Drawing.Size(212, 89)
+        Me.TextBoxDescription.Size = New System.Drawing.Size(211, 89)
         Me.TextBoxDescription.TabIndex = 8
         '
         'ButtonLists
         '
-        Me.ButtonLists.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ButtonLists.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
         Me.ButtonLists.FlatAppearance.BorderColor = System.Drawing.Color.Black
         Me.ButtonLists.FlatAppearance.BorderSize = 0
         Me.ButtonLists.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black
+        Me.ButtonLists.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonLists.Font = New System.Drawing.Font("Calibri", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonLists.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ButtonLists.Location = New System.Drawing.Point(5, 122)
+        Me.ButtonLists.Location = New System.Drawing.Point(-2, 122)
         Me.ButtonLists.Name = "ButtonLists"
-        Me.ButtonLists.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonLists.Size = New System.Drawing.Size(88, 25)
         Me.ButtonLists.TabIndex = 5
         Me.ButtonLists.Text = "&Lists"
         Me.ButtonLists.UseVisualStyleBackColor = False
@@ -532,9 +555,9 @@ Partial Class MyCommands_Browser
         Me.CheckBoxShowAll.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.CheckBoxShowAll.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBoxShowAll.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.CheckBoxShowAll.Location = New System.Drawing.Point(106, 117)
+        Me.CheckBoxShowAll.Location = New System.Drawing.Point(197, 117)
         Me.CheckBoxShowAll.Name = "CheckBoxShowAll"
-        Me.CheckBoxShowAll.Size = New System.Drawing.Size(179, 28)
+        Me.CheckBoxShowAll.Size = New System.Drawing.Size(178, 28)
         Me.CheckBoxShowAll.TabIndex = 7
         Me.CheckBoxShowAll.Text = "Show All Commands"
         Me.CheckBoxShowAll.UseVisualStyleBackColor = False
@@ -544,21 +567,21 @@ Partial Class MyCommands_Browser
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(3, 5)
+        Me.Label2.Location = New System.Drawing.Point(-4, 5)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(121, 20)
-        Me.Label2.TabIndex = 4
+        Me.Label2.TabIndex = 0
         Me.Label2.Text = "&Filter Command"
         '
         'txtSearch
         '
-        Me.txtSearch.BackColor = System.Drawing.SystemColors.InfoText
-        Me.txtSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSearch.ForeColor = System.Drawing.SystemColors.Window
-        Me.txtSearch.Location = New System.Drawing.Point(130, 3)
+        Me.txtSearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer), CType(CType(38, Byte), Integer))
+        Me.txtSearch.Font = New System.Drawing.Font("Calibri", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearch.ForeColor = System.Drawing.Color.White
+        Me.txtSearch.Location = New System.Drawing.Point(123, 3)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(155, 26)
-        Me.txtSearch.TabIndex = 0
+        Me.txtSearch.Size = New System.Drawing.Size(154, 27)
+        Me.txtSearch.TabIndex = 1
         '
         'LaunchApplicationsDataSet
         '
@@ -578,13 +601,14 @@ Partial Class MyCommands_Browser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1143, 686)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer), CType(CType(12, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1392, 712)
         Me.Controls.Add(Me.ToolStripContainer2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
+        Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "MyCommands_Browser"
-        Me.ShowInTaskbar = False
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "My Commands in Dragon"
         CType(Me.DataGridViewCommand, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
@@ -614,13 +638,8 @@ Partial Class MyCommands_Browser
     Friend WithEvents TopToolStripPanel As System.Windows.Forms.ToolStripPanel
     Friend WithEvents DataGridViewCommand As System.Windows.Forms.DataGridView
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents DataGridViewContents As System.Windows.Forms.DataGridView
     Friend WithEvents TreeViewLists As System.Windows.Forms.TreeView
     Friend WithEvents ToolStripContainer2 As System.Windows.Forms.ToolStripContainer
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents TextBoxApplicationCaption As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxProcess As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxFilterApplied As System.Windows.Forms.TextBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Label4 As Label
@@ -640,4 +659,9 @@ Partial Class MyCommands_Browser
     Friend WithEvents TextBoxFilterApplications As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents ApplicationCaptionsButton As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents TextBoxProcess As TextBox
+    Friend WithEvents TextBoxApplicationCaption As TextBox
+    Friend WithEvents TextBoxFilterApplied As TextBox
+    Friend WithEvents DataGridViewContents As DataGridView
 End Class

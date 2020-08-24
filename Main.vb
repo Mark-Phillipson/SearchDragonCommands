@@ -40,7 +40,7 @@ Public Class Main
         End Try
     End Sub
 
-    Private Sub ShowDragonCommands()
+    Private Sub ShowDragonCommands(Optional arguments() As String = Nothing)
         frmMyCommands_Browser = New MyCommands_Browser
 
         Dim myScreens() As Screen = Screen.AllScreens
@@ -51,9 +51,7 @@ Public Class Main
             frmMyCommands_Browser.Height = myScreens(1).Bounds.Height - 50
 
         End If
-        '       End If
-
-        'frmMyCommands_Browser.WindowState = FormWindowState.Maximized
+        frmMyCommands_Browser.txtSearch.Text = arguments(0)
         On Error GoTo 0
         frmMyCommands_Browser.Show()
     End Sub

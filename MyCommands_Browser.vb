@@ -1,4 +1,4 @@
-﻿Imports System
+Imports System
 Imports System.Xml.Linq
 Imports System.Xml
 Imports System.Data
@@ -38,6 +38,10 @@ Public Class MyCommands_Browser
 
     Private Sub MyCommands_Browser_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         On Error GoTo 0
+
+        Me.DataGridViewCommand.EnableHeadersVisualStyles = False
+        Me.DataGridViewCommands.EnableHeadersVisualStyles = False
+        Me.DataGridViewCommandsShowAll.EnableHeadersVisualStyles = False
 
         Me.TblApplicationCaptionsTableAdapter.Fill(Me.LaunchApplicationsDataSet.tblApplicationCaptions)
         Dim xrs = New XmlReaderSettings()
@@ -144,7 +148,7 @@ Public Class MyCommands_Browser
 
         Dim index As Integer =
         detailsBindingSource.Find("name", "Compile Code")
-        If index < -1 Then 'it was found; move to that position
+        If index < -1 Then '
             detailsBindingSource.Position = index
         End If
         Me.detailsBindingSource.MoveFirst()
@@ -167,6 +171,20 @@ Public Class MyCommands_Browser
 
         RandomSelectCommand()
         RefreshFormControls()
+        Dim arguments(2) As String
+        Dim k As Integer
+        For Each argument In My.Application.CommandLineArgs
+            arguments(k) = argument
+            k = k + 1
+        Next
+        'MessageBox.Show(My.Application.CommandLineArgs(0))
+        'MessageBox.Show(My.Application.CommandLineArgs(1))
+        If arguments(0) = Nothing Then
+            arguments(0) = "/Insert"
+        End If
+        Me.txtSearch.Text = arguments(0).Replace("/", "")
+        Me.CheckBoxShowAll.Checked = True
+        BuildFilter()
         Me.txtSearch.Focus()
     End Sub
 
@@ -389,23 +407,8 @@ Public Class MyCommands_Browser
 
                     Dim RootNode = New TreeNode(strListName)
                     Me.TreeViewLists.Nodes.Add(RootNode)
-
-
-
                     ' loop through each list item
                     ListsBindingSource.MoveFirst()
-
-                    'Dim result = From ele In MyCommands.<Lists>.<List> _
-                    '             Where ele.@name = strListName _
-                    '             Select ele.Value
-
-                    'For Each v In result
-                    '    Me.TreeViewLists.Nodes(intNodeCounter).Nodes.Add(New TreeNode(v))
-                    'Next
-
-
-
-
                     Dim drv As DataRowView
                     If ListsBindingSource.Position > -1 Then
                         drv = ListsBindingSource.Item(ListsBindingSource.Position)
@@ -419,20 +422,6 @@ Public Class MyCommands_Browser
                         Loop
                     End If
                     intNodeCounter = intNodeCounter + 1
-
-                    'For intLoopIndex As Integer = 2 To 3
-                    '    Me.TreeViewLists.Nodes(0).Nodes(0).Nodes.Add(New  _
-                    '        TreeNode("Node" & Str(intLoopIndex)))
-                    'Next intLoopIndex
-
-                    'Me.TreeViewLists.Nodes(0).Nodes.Add(New TreeNode("Node 4"))
-
-                    'For intLoopIndex As Integer = 5 To 6
-                    '    Me.TreeViewLists.Nodes(0).Nodes(1).Nodes.Add(New  _
-                    '        TreeNode("Node" & Str(intLoopIndex)))
-                    'Next intLoopIndex
-
-
                     strTemporary = Mid(strTemporary, position2 + 2)
                 Else
                     Exit Do
@@ -573,13 +562,14 @@ Public Class MyCommands_Browser
             Me.DataGridViewContents.Visible = False
             Me.TextBoxFilterApplications.Text = ""
             Me.TextBoxFilterApplications.Visible = False
+            Me.Label5.Visible = False
         Else
             Me.DataGridViewCommand.DataSource = detailsBindingSource
             Me.DataGridViewCommandsShowAll.Visible = False
             Me.DataGridViewCommands.Visible = True
             Me.DataGridViewContents.Visible = False
             Me.TextBoxFilterApplications.Visible = True
-
+            Me.Label5.Visible = True
         End If
         RandomSelectCommand()
         RefreshFormControls()
@@ -708,6 +698,22 @@ Public Class MyCommands_Browser
         form.Show()
     End Sub
 
+    Private Sub RichTextBox1_DoubleClick(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub RichTextBox1_DoubleClick_1(sender As Object, e As EventArgs) Handles RichTextBox1.DoubleClick
+        If RichTextBox1.Dock = DockStyle.Fill Then
+            RichTextBox1.Dock = DockStyle.None
+        Else
+            RichTextBox1.Dock = DockStyle.Fill
+            RichTextBox1.BringToFront()
+        End If
+    End Sub
+
+    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
+
+    End Sub
 End Class
 
 
